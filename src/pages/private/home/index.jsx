@@ -170,6 +170,7 @@ function Home() {
       </div>
       {/* Notification Modal */}
       <SharedComp.Modal
+        title="Notification"
         isOpen={isNotificationModalOpen}
         onClose={CloseNotificationModal}
       >

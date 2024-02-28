@@ -1,7 +1,7 @@
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import React, { useEffect } from "react";
 
-function Modal({ isOpen, onClose, children }) {
+function Modal({ isOpen, onClose, children, title }) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -20,7 +20,7 @@ function Modal({ isOpen, onClose, children }) {
           <ChevronLeftIcon className="h-6 w-6 text-slate-700" />
         </div>
         <div className="grow text-center">
-          <h1 className="font-semibold text-slate-700">Notification</h1>
+          <h1 className="font-semibold text-slate-700">{title}</h1>
         </div>
         <div className="flex-none w-12"></div>
       </div>
