@@ -7,6 +7,8 @@ import { default as Tab } from "./tab";
 import { default as LeaveApprovalCard } from "./leave-approval-card";
 import { default as Carousel } from "./carousel";
 import { default as ActivityCard } from "./activity-card";
+import { default as Modal } from "./modal";
+import { default as NotificationItem } from "./notification-item";
 
 export {
   Input,
@@ -18,4 +20,6 @@ export {
   LeaveApprovalCard,
   Carousel,
   ActivityCard,
+  Modal,
+  NotificationItem,
 };

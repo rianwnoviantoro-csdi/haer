@@ -12,7 +12,7 @@ function Holiday() {
     <div className="p-4 mb-10">
       <div className="flex justify-between place-items-center">
         <div className="">
-          <h1 className="font-semibold text-lg">Holiday</h1>
+          <h1 className="font-semibold text-lg">Holiday List</h1>
         </div>
       </div>
       {/* Holidays */}
