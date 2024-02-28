@@ -10,8 +10,8 @@ function App() {
 
       <Route path="dashboard" element={<LayoutComp />}>
         <Route index element={<PrivatePage.Home />} />
-        <Route path="calendar" element={<PrivatePage.Calendar />} />
         <Route path="leave" element={<PrivatePage.Leave />} />
+        <Route path="holiday" element={<PrivatePage.Holiday />} />
         <Route path="profile" element={<PrivatePage.Profile />} />
 
         <Route path="*" element={<PublicPage.NotFound />} />

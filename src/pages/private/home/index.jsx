@@ -54,7 +54,7 @@ function Home() {
         ))}
       </SharedComp.Carousel>
       {/* Attendance */}
-      <div className="p-4 bg-[#ACAFB5]/15 rounded-t-2xl">
+      <div className="p-4 bg-[#ACAFB5]/15 rounded-t-2xl min-h-1/2">
         {/* Today */}
         <div className="mb-6">
           <div className="mb-3 flex justify-between place-items-center">

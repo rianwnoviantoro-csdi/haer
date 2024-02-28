@@ -5,7 +5,7 @@ function BottomNavigationItem({ path, icon, label, center = false }) {
   return (
     <Link to={path} className="w-full flex justify-center">
       {center ? (
-        <div className="bg-[#3085FE] outline outline-4 outline-white absolute w-14 h-14 rounded-full -top-7 flex items-center justify-center">
+        <div className="bg-[#3085FE] outline outline-8 outline-white absolute w-14 h-14 rounded-full -top-4 flex items-center justify-center">
           <div>{icon}</div>
         </div>
       ) : (

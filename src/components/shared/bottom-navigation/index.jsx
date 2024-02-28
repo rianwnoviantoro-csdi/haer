@@ -25,7 +25,7 @@ function BottomNavigation() {
   }
 
   return (
-    <div className="fixed max-w-xl mx-auto bottom-0 left-0 right-0 shadow-lg p-3 bg-slate-50 flex justify-evenly place-items-center rounded-t-2xl">
+    <div className="fixed max-w-xl mx-auto bottom-0 left-0 right-0 drop-shadow-2xl p-3 bg-white flex justify-evenly place-items-center rounded-t-2xl">
       <SharedComp.BottomNavigationItem
         path="/dashboard"
         label="Home"
@@ -38,29 +38,29 @@ function BottomNavigation() {
         }
       />
       <SharedComp.BottomNavigationItem
-        path="calendar"
-        label="Calendar"
+        path="leave"
+        label="Leave"
         icon={
           <CalendarIcon
             className={`h-6 w-6 ${
-              IsActive("/dashboard/calendar")
-                ? "text-[#3085FE]"
-                : "text-slate-600"
+              IsActive("/dashboard/leave") ? "text-[#3085FE]" : "text-slate-600"
             }`}
           />
         }
       />
       <SharedComp.BottomNavigationItem
         center={true}
-        icon={<UserGroupIcon className="h-6 w-6 text-white" />}
+        icon={<UserGroupIcon className="h-8 w-8 text-white" />}
       />
       <SharedComp.BottomNavigationItem
-        path="leave"
-        label="Leave"
+        path="holiday"
+        label="Holiday"
         icon={
           <SunIcon
             className={`h-6 w-6 ${
-              IsActive("/dashboard/leave") ? "text-[#3085FE]" : "text-slate-600"
+              IsActive("/dashboard/holiday")
+                ? "text-[#3085FE]"
+                : "text-slate-600"
             }`}
           />
         }
