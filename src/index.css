@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Lexend", system-ui, sans-serif;
+  }
+}
+
 body {
   @apply text-slate-800; /* or any other text color class */
 }

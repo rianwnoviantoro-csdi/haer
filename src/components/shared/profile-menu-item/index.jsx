@@ -17,7 +17,7 @@ function ProfileMenuItem({ icon, title, path }) {
           </div>
         </div>
         <div className="cursor-pointer">
-          <ChevronRightIcon className="h-6 w-6 " />
+          <ChevronRightIcon className="h-3 w-3 " />
         </div>
       </div>
       <hr />
