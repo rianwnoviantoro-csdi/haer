@@ -28,7 +28,7 @@ function BottomNavigation() {
     <div className="fixed max-w-xl mx-auto bottom-0 left-0 right-0 drop-shadow-2xl p-3 bg-white flex justify-evenly place-items-center rounded-t-2xl">
       <SharedComp.BottomNavigationItem
         path="/dashboard"
-        label="Home"
+        isActive={IsActive("/dashboard")}
         icon={
           <HomeIcon
             className={`h-6 w-6 ${
@@ -39,7 +39,7 @@ function BottomNavigation() {
       />
       <SharedComp.BottomNavigationItem
         path="leave"
-        label="Leave"
+        isActive={IsActive("/dashboard/leave")}
         icon={
           <CalendarIcon
             className={`h-6 w-6 ${
@@ -55,7 +55,7 @@ function BottomNavigation() {
       />
       <SharedComp.BottomNavigationItem
         path="holiday"
-        label="Holiday"
+        isActive={IsActive("/dashboard/holiday")}
         icon={
           <SunIcon
             className={`h-6 w-6 ${
@@ -68,7 +68,7 @@ function BottomNavigation() {
       />
       <SharedComp.BottomNavigationItem
         path="profile"
-        label="Profile"
+        isActive={IsActive("/dashboard/profile")}
         icon={
           <UserIcon
             className={`h-6 w-6 ${

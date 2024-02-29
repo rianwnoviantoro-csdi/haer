@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function BottomNavigationItem({ path, icon, label, center = false }) {
+function BottomNavigationItem({ path, icon, center = false, isActive }) {
   return (
     <Link to={path} className="w-full flex justify-center">
       {center ? (
@@ -9,12 +9,14 @@ function BottomNavigationItem({ path, icon, label, center = false }) {
           <div>{icon}</div>
         </div>
       ) : (
-        <div className="flex flex-col justify-center place-items-center">
-          {icon}
-          <p className="mt-1 text-[9px] tracking-wider text-[#ACAFB5]">
-            {label}
-          </p>
-        </div>
+          <div className="flex flex-col justify-center place-items-center">
+            {icon}
+            {isActive ? (
+              <div className="mt-1 rounded-full h-1 w-2 bg-[#3085FE]/50"></div>
+            ) : (
+              <div className="mt-1 rounded-full h-1 w-2"></div>
+            )}
+          </div>
       )}
     </Link>
   );
