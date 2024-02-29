@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   AdjustmentsHorizontalIcon,
   SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
 import { SharedComp } from "../../../components";
+import { useDispatch } from "react-redux";
+import { setShowBottomNav } from "../../../redux/features/common/common.slice";
 
 function Leave() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(setShowBottomNav({ show: true }));
+  }, []);
+
   const tabs = [
     {
       title: "Upcoming",

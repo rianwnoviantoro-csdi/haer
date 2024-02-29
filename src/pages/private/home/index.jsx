@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowLeftEndOnRectangleIcon,
   ArrowRightEndOnRectangleIcon,
@@ -14,10 +14,18 @@ import dayjs from "dayjs";
 import { AVATAR } from "../../../constant";
 import { SharedComp } from "../../../components";
 import { DateArray } from "../../../utils/date";
+import { useDispatch } from "react-redux";
+import { setShowBottomNav } from "../../../redux/features/common/common.slice";
 
 function Home() {
   let [isNotificationModalOpen, setNotificationModalOpen] = useState(false);
+
   const days = DateArray(3);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setShowBottomNav({ show: true }));
+  }, []);
 
   function OpenNotificationModal() {
     setNotificationModalOpen(true);
