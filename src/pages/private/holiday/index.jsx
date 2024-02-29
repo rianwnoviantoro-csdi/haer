@@ -1,12 +1,19 @@
 import { CalendarDaysIcon } from "@heroicons/react/24/outline";
 import Holidays from "date-holidays";
 import dayjs from "dayjs";
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setShowBottomNav } from "../../../redux/features/common/common.slice";
 
 function Holiday() {
   const holidays = new Holidays("ID");
   const currentYear = dayjs().year();
   const holidaysArray = holidays.getHolidays(currentYear);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setShowBottomNav({ show: true }));
+  }, []);
 
   return (
     <div className="p-4 mb-10">

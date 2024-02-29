@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   EllipsisVerticalIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 import { AVATAR } from "../../../constant";
 import { SharedComp } from "../../../components";
+import { useDispatch } from "react-redux";
+import { setShowBottomNav } from "../../../redux/features/common/common.slice";
 
 function Team() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setShowBottomNav({ show: true }));
+  }, []);
+
   return (
     <div className="p-4 mb-16">
       <div className="fixed bg-slate-50 max-w-xl mx-auto top-0 left-0 right-0 p-4 z-50">
