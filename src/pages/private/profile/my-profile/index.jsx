@@ -94,7 +94,7 @@ function MyProfile() {
   ];
 
   return (
-    <div className="bg-white h-[calc(100vh)]">
+    <div className="bg-white min-h-screen h-full">
       <div className="max-w-xl w-full mx-auto p-4 flex gap-3 justify-center place-items-center fixed top-0 bg-white z-50 shadow-sm">
         <Link to="/dashboard/profile" className="flex-none w-12 cursor-pointer">
           <ChevronLeftIcon className="h-6 w-6 text-slate-700" />
