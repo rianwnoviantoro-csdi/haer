@@ -72,7 +72,7 @@ function Login() {
             icon={GOOGLE}
             border="border border-slate-100"
             background="bg-slate-100/20"
-            color="text-slate-700"
+            color="text-slate-800"
             label="Google"
           />
         </div>

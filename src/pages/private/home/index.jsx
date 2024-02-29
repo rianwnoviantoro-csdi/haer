@@ -97,7 +97,7 @@ function Home() {
                   </div>
                   <p className="text-xs text-slate-600">Check In</p>
                 </div>
-                <h2 className="font-semibold text-lg text-slate-700 leading-loose">
+                <h2 className="font-semibold text-lg  leading-loose">
                   10:20 am
                 </h2>
                 <p className="text-xs text-slate-600">On Time</p>
@@ -110,7 +110,7 @@ function Home() {
                   </div>
                   <p className="text-xs text-slate-600">Check Out</p>
                 </div>
-                <h2 className="font-semibold text-lg text-slate-700 leading-loose">
+                <h2 className="font-semibold text-lg  leading-loose">
                   07:00 pm
                 </h2>
                 <p className="text-xs text-slate-600">Go Home</p>
@@ -123,7 +123,7 @@ function Home() {
                   </div>
                   <p className="text-xs text-slate-600">Break Time</p>
                 </div>
-                <h2 className="font-semibold text-lg text-slate-700 leading-loose">
+                <h2 className="font-semibold text-lg  leading-loose">
                   00:30 min
                 </h2>
                 <p className="text-xs text-slate-600">Avg Time 30 min</p>
@@ -136,7 +136,7 @@ function Home() {
                   </div>
                   <p className="text-xs text-slate-600">Total Days</p>
                 </div>
-                <h2 className="font-semibold text-lg text-slate-700 leading-loose">
+                <h2 className="font-semibold text-lg  leading-loose">
                   28
                 </h2>
                 <p className="text-xs text-slate-600">Working Days</p>

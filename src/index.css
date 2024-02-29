@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.scale-0 {
-  transform: scale(0);
-}
-
-.transition-transform {
-  transition-property: transform;
-}
-
-.transition-opacity {
-  transition-property: opacity;
+body {
+  @apply text-slate-800; /* or any other text color class */
 }

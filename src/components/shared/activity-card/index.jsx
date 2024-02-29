@@ -7,13 +7,13 @@ function ActivityCard({ icon, title, date, status }) {
       <div className="p-2 bg-[#3085FE]/5 rounded-lg">{icon}</div>
       <div className="grow flex justify-between place-items-center">
         <div className="">
-          <h3 className="font-semibold text-slate-700 leading-snug">{title}</h3>
+          <h3 className="font-semibold leading-snug">{title}</h3>
           <p className="text-xs text-[#ACAFB5] leading-snug">
             {dayjs(date).format("MMMM DD, YYYY")}
           </p>
         </div>
         <div className="">
-          <h3 className="font-semibold text-slate-700 leading-snug">
+          <h3 className="font-semibold leading-snug">
             {dayjs(date).format("hh:mm a")}
           </h3>
           <p className="text-xs text-[#ACAFB5] leading-snug">{status}</p>

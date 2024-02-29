@@ -20,12 +20,12 @@ function Team() {
       <div className="fixed bg-slate-50 max-w-xl mx-auto top-0 left-0 right-0 p-4 z-50">
         <div className="flex justify-between place-items-center">
           <div className="">
-            <h1 className="font-semibold text-lg text-slate-700">
+            <h1 className="font-semibold text-lg ">
               Team Members
             </h1>
           </div>
           <div className="cursor-pointer">
-            <EllipsisVerticalIcon className="h-6 w-6 text-slate-700" />
+            <EllipsisVerticalIcon className="h-6 w-6 " />
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ function Team() {
             autoComplete="off"
           />
           <div className="absolute left-2 top-1/2 -translate-y-1/2">
-            <MagnifyingGlassIcon className="h-6 w-6 text-slate-700" />
+            <MagnifyingGlassIcon className="h-6 w-6 " />
           </div>
         </div>
       </div>

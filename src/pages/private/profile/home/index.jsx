@@ -46,22 +46,22 @@ function Home() {
       <div className="mt-10">
         <SharedComp.ProfileMenuItem
           path="mine"
-          icon={<UserIcon className="h-6 w-6 text-slate-700" />}
+          icon={<UserIcon className="h-6 w-6 " />}
           title="My Profile"
         />
         <SharedComp.ProfileMenuItem
           path="setting"
-          icon={<Cog6ToothIcon className="h-6 w-6 text-slate-700" />}
+          icon={<Cog6ToothIcon className="h-6 w-6 " />}
           title="Setting"
         />
         <SharedComp.ProfileMenuItem
           path="term-and-condition"
-          icon={<DocumentIcon className="h-6 w-6 text-slate-700" />}
+          icon={<DocumentIcon className="h-6 w-6 " />}
           title="Term & Conditions"
         />
         <SharedComp.ProfileMenuItem
           path="privacy-policy"
-          icon={<ShieldCheckIcon className="h-6 w-6 text-slate-700" />}
+          icon={<ShieldCheckIcon className="h-6 w-6 " />}
           title="Privacy Policy"
         />
         <Link to="/" className="my-2 flex gap-3 justify-between place-items-center">

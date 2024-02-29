@@ -11,13 +11,13 @@ function ProfileMenuItem({ icon, title, path }) {
             {icon}
           </div>
           <div className="grow">
-            <h1 className="font-semibold leading-tight text-slate-700">
+            <h1 className="font-semibold leading-tight ">
               {title}
             </h1>
           </div>
         </div>
         <div className="cursor-pointer">
-          <ChevronRightIcon className="h-6 w-6 text-slate-700" />
+          <ChevronRightIcon className="h-6 w-6 " />
         </div>
       </div>
       <hr />

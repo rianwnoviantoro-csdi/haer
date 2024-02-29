@@ -15,10 +15,10 @@ function Setting() {
     <div className="bg-white min-h-screen h-full">
       <div className="max-w-xl w-full mx-auto p-4 flex gap-3 justify-center place-items-center fixed top-0 bg-white z-50 shadow-sm">
         <Link to="/dashboard/profile" className="flex-none w-12 cursor-pointer">
-          <ChevronLeftIcon className="h-6 w-6 text-slate-700" />
+          <ChevronLeftIcon className="h-6 w-6 " />
         </Link>
         <div className="grow text-center">
-          <h1 className="font-semibold text-slate-700">Change Password</h1>
+          <h1 className="font-semibold ">Change Password</h1>
         </div>
         <div className="flex-none w-12"></div>
       </div>

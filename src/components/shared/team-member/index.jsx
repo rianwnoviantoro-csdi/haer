@@ -19,7 +19,7 @@ function TeamMember({ image, name, email }) {
           </div>
         </div>
         <div className="cursor-pointer">
-          <EllipsisVerticalIcon className="h-6 w-6 text-slate-700" />
+          <EllipsisVerticalIcon className="h-6 w-6 " />
         </div>
       </div>
       <hr />
