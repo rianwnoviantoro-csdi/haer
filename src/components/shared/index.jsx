@@ -10,6 +10,7 @@ import { default as ActivityCard } from "./activity-card";
 import { default as Modal } from "./modal";
 import { default as NotificationItem } from "./notification-item";
 import { default as TeamMember } from "./team-member";
+import { default as ProfileMenuItem } from "./profile-menu-item";
 
 export {
   Input,
@@ -23,5 +24,6 @@ export {
   ActivityCard,
   Modal,
   NotificationItem,
-  TeamMember
+  TeamMember,
+  ProfileMenuItem
 };

@@ -5,7 +5,7 @@ function Button({ background, color, label, border = "", icon, onClick }) {
     <button
       // type="submit"
       onClick={onClick}
-      className={`${background} ${border} w-full py-3 rounded-lg`}
+      className={`${background} ${border} w-full py-2.5 rounded-lg`}
     >
       {icon ? (
         <div className="flex justify-center gap-2">

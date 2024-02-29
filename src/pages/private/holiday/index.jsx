@@ -10,13 +10,17 @@ function Holiday() {
 
   return (
     <div className="p-4 mb-10">
-      <div className="flex justify-between place-items-center">
-        <div className="">
-          <h1 className="font-semibold text-lg">Holiday List</h1>
+      <div className="fixed bg-slate-50 max-w-xl mx-auto top-0 left-0 right-0 p-4 z-50">
+        <div className="flex justify-between place-items-center">
+          <div className="">
+            <h1 className="font-semibold text-lg text-slate-700">
+              Holiday List
+            </h1>
+          </div>
         </div>
       </div>
       {/* Holidays */}
-      <div className="my-6">
+      <div className="mt-14 my-6">
         {holidaysArray.map((holiday, index) => (
           <div
             key={index}

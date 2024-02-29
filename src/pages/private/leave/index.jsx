@@ -89,7 +89,8 @@ function Leave() {
 
   return (
     <div className="p-4 mb-7">
-      <div className="flex justify-between place-items-center">
+      <div className="fixed bg-slate-50 max-w-xl mx-auto top-0 left-0 right-0 p-4 z-50">
+        <div className="flex justify-between place-items-center">
         <div className="">
           <h1 className="font-semibold text-lg">All Leaves</h1>
         </div>
@@ -97,9 +98,10 @@ function Leave() {
           <SquaresPlusIcon className="h-6 w-6" />
           <AdjustmentsHorizontalIcon className="h-6 w-6" />
         </div>
+        </div>
       </div>
       {/* Summary */}
-      <div className="my-6">
+      <div className="mt-14 my-6">
         <SharedComp.Summary />
       </div>
       {/* Tab */}
