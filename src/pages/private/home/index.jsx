@@ -5,10 +5,8 @@ import {
   Battery50Icon,
   BellIcon,
   CalendarDaysIcon,
-  ChevronLeftIcon,
   DevicePhoneMobileIcon,
   LockClosedIcon,
-  PhoneIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
 import { SwiperSlide } from "swiper/react";

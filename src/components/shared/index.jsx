@@ -9,6 +9,7 @@ import { default as Carousel } from "./carousel";
 import { default as ActivityCard } from "./activity-card";
 import { default as Modal } from "./modal";
 import { default as NotificationItem } from "./notification-item";
+import { default as TeamMember } from "./team-member";
 
 export {
   Input,
@@ -22,4 +23,5 @@ export {
   ActivityCard,
   Modal,
   NotificationItem,
+  TeamMember
 };

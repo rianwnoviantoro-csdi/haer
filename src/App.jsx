@@ -13,6 +13,7 @@ function App() {
         <Route path="leave" element={<PrivatePage.Leave />} />
         <Route path="holiday" element={<PrivatePage.Holiday />} />
         <Route path="profile" element={<PrivatePage.Profile />} />
+        <Route path="team" element={<PrivatePage.Team />} />
 
         <Route path="*" element={<PublicPage.NotFound />} />
       </Route>

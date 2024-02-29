@@ -50,6 +50,7 @@ function BottomNavigation() {
       />
       <SharedComp.BottomNavigationItem
         center={true}
+        path="team"
         icon={<UserGroupIcon className="h-8 w-8 text-white" />}
       />
       <SharedComp.BottomNavigationItem
