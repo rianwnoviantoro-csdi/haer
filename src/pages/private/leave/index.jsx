@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AdjustmentsHorizontalIcon,
   SquaresPlusIcon,
@@ -8,7 +8,8 @@ import { useDispatch } from "react-redux";
 import { setShowBottomNav } from "../../../redux/features/common/common.slice";
 
 function Leave() {
-  const dispatch = useDispatch()
+  let [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(setShowBottomNav({ show: true }));
@@ -95,28 +96,46 @@ function Leave() {
     },
   ];
 
+  function OpenCreateModal() {
+    setIsCreateModalOpen(true);
+  }
+
+  function CloseCreateModal() {
+    setIsCreateModalOpen(false);
+  }
+
   return (
-    <div className="p-4 mb-7">
-      <div className="fixed bg-slate-50 max-w-xl mx-auto top-0 left-0 right-0 p-4 z-50">
-        <div className="flex justify-between place-items-center">
-        <div className="">
-          <h1 className="font-semibold text-lg">All Leaves</h1>
+    <>
+      <div className="p-4 mb-7">
+        <div className="fixed bg-slate-50 max-w-xl mx-auto top-0 left-0 right-0 p-4 z-50">
+          <div className="flex justify-between place-items-center">
+            <div className="">
+              <h1 className="font-semibold text-lg">All Leaves</h1>
+            </div>
+            <div className="flex gap-3">
+              <SquaresPlusIcon onClick={OpenCreateModal} className="h-6 w-6" />
+              <AdjustmentsHorizontalIcon className="h-6 w-6" />
+            </div>
+          </div>
         </div>
-        <div className="flex gap-3">
-          <SquaresPlusIcon className="h-6 w-6" />
-          <AdjustmentsHorizontalIcon className="h-6 w-6" />
+        {/* Summary */}
+        <div className="mt-14 my-6">
+          <SharedComp.Summary />
         </div>
+        {/* Tab */}
+        <div className="my-6">
+          <SharedComp.Tab tabs={tabs} />
         </div>
       </div>
-      {/* Summary */}
-      <div className="mt-14 my-6">
-        <SharedComp.Summary />
-      </div>
-      {/* Tab */}
-      <div className="my-6">
-        <SharedComp.Tab tabs={tabs} />
-      </div>
-    </div>
+      {/* Create Modal */}
+      <SharedComp.Modal
+        title="Request Leave"
+        isOpen={isCreateModalOpen}
+        onClose={CloseCreateModal}
+      >
+        test
+      </SharedComp.Modal>
+    </>
   );
 }
 

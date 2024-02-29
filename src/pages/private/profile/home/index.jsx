@@ -11,6 +11,7 @@ import {
 import { SharedComp } from "../../../../components";
 import { useDispatch } from "react-redux";
 import { setShowBottomNav } from "../../../../redux/features/common/common.slice";
+import { Link } from "react-router-dom";
 
 function Home() {
   const dispatch = useDispatch();
@@ -63,7 +64,7 @@ function Home() {
           icon={<ShieldCheckIcon className="h-6 w-6 text-slate-700" />}
           title="Privacy Policy"
         />
-        <div className="my-2 flex gap-3 justify-between place-items-center">
+        <Link to="/" className="my-2 flex gap-3 justify-between place-items-center">
           <div className="flex gap-4 place-items-center">
             <div className="h-10 w-10 rounded-full flex justify-center place-items-center bg-[#FF7F74]/5">
               <ArrowLeftStartOnRectangleIcon className="h-6 w-6 text-[#FF7F74]" />
@@ -74,7 +75,7 @@ function Home() {
               </h1>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

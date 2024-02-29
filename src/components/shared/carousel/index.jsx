@@ -9,11 +9,11 @@ function Carousel({ children }) {
   return (
     <Swiper
       centeredSlides={false}
-      slidesPerView={4.5}
+      slidesPerView={4.7}
       mousewheel={true}
       slidesOffsetBefore={15}
       slidesOffsetAfter={15}
-      spaceBetween={15}
+      spaceBetween={10}
       freeMode={true}
       modules={[FreeMode, Mousewheel]}
       className="my-6"
