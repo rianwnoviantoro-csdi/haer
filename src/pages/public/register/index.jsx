@@ -3,17 +3,32 @@ import { GOOGLE, LOGO } from "../../../constant";
 import { SharedComp } from "../../../components";
 import { Link, useNavigate } from "react-router-dom";
 
-function Login() {
+function Register() {
   const navigate = useNavigate();
   let [email, setEmail] = useState("");
+  let [firstName, setFirstName] = useState("");
+  let [lastName, setLastName] = useState("");
   let [password, setPassword] = useState("");
+  let [confirmPassword, setConfirmPassword] = useState("");
 
-  function emailHandler(e) {
+  function FirstNameHandler(e) {
+    setFirstName(e);
+  }
+
+  function LastNameHandler(e) {
+    setLastName(e);
+  }
+
+  function EmailHandler(e) {
     setEmail(e);
   }
 
   function PasswordHandler(e) {
     setPassword(e);
+  }
+
+  function ConfirmHandler(e) {
+    setConfirm(e);
   }
 
   function MoveToDashboad() {
@@ -26,20 +41,34 @@ function Login() {
         <img src={LOGO} alt="" />
         <div className="my-6">
           <h1 className="text-3xl font-semibold leading-snug">
-            Welcome Back 👋 <br /> to{" "}
+            Register Account <br /> to{" "}
             <span className="text-[#3085FE]">HR Attendee</span>
           </h1>
           <p className="font-light text-[#ACAFB5]">
-            Hello there, login to continue
+            Hello there, register to continue
           </p>
         </div>
         <form autoComplete="off">
+          <SharedComp.Input
+            label="First Name"
+            placeholder="first name"
+            type="text"
+            value={firstName}
+            onChange={FirstNameHandler}
+          />
+          <SharedComp.Input
+            label="Last Name"
+            placeholder="last name"
+            type="text"
+            value={lastName}
+            onChange={LastNameHandler}
+          />
           <SharedComp.Input
             label="Email Address"
             placeholder="email address"
             type="email"
             value={email}
-            onChange={emailHandler}
+            onChange={EmailHandler}
           />
           <SharedComp.Input
             label="Password"
@@ -48,15 +77,23 @@ function Login() {
             value={password}
             onChange={PasswordHandler}
           />
-          <div className="mt-3 mb-6">
-            <p className="tracking-wide text-right text-[#3085FE] cursor-pointer">
-              Forgot Password ?
-            </p>
+          <SharedComp.Input
+            label="Confirm Password"
+            placeholder="confirm password"
+            type="password"
+            value={confirmPassword}
+            onChange={ConfirmHandler}
+          />
+          <div className="relative mt-3 mb-6 flex gap-2 place-items-baseline">
+            <input type="checkbox" />
+            <label className="font-light text-sm">
+              I agree to the <Link to="/" className="text-[#3085FE]">Terms & Condition</Link> &{" "}
+              <Link to="/" className="text-[#3085FE]">Privacy Policy</Link> set out by this site.
+            </label>
           </div>
           <SharedComp.Button
-            background="bg-[#3085FE]"
-            color="text-white"
-            label="Login"
+            background="bg-[#ACAFB5]/15"
+            label="Register"
             onClick={MoveToDashboad}
           />
         </form>
@@ -78,8 +115,10 @@ function Login() {
         </div>
         <div className="mt-6 flex justify-around place-items-center">
           <p className="font-light">
-            Didn’t have an account?{" "}
-            <Link to="/register" className="text-[#3085FE] cursor-pointer">Register</Link>
+            Already have an account?{" "}
+            <Link to="/" className="text-[#3085FE] cursor-pointer">
+              Login
+            </Link>
           </p>
         </div>
       </div>
@@ -87,4 +126,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

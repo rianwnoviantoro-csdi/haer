@@ -7,6 +7,7 @@ function App() {
   return (
     <Routes>
       <Route index element={<PublicPage.Login />} />
+      <Route path="register" element={<PublicPage.Register />} />
 
       <Route path="dashboard" element={<LayoutComp />}>
         <Route index element={<PrivatePage.Home />} />
