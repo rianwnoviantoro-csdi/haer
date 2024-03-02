@@ -41,12 +41,12 @@ function Input({ label, placeholder, type = "text", value, onChange }) {
         <div className="absolute right-3 top-1/2 -translate-y-1/2">
           {isPasswordVisible ? (
             <EyeSlashIcon
-              className="h-6 w-6 cursor-pointer text-slate-500 hover:text-slate-800 transition-colors duration-200"
+              className="h-5 w-5 cursor-pointer text-slate-500 hover:text-slate-800 transition-colors duration-200"
               onClick={togglePasswordVisibility}
             />
           ) : (
             <EyeIcon
-              className="h-6 w-6 cursor-pointer text-slate-500 hover:text-slate-800 transition-colors duration-200"
+              className="h-5 w-5 cursor-pointer text-slate-500 hover:text-slate-800 transition-colors duration-200"
               onClick={togglePasswordVisibility}
             />
           )}

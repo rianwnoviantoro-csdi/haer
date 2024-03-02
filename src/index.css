@@ -8,3 +8,32 @@
     @apply text-slate-800
   }
 }
+
+.react-datepicker-wrapper {
+  @apply w-full
+}
+
+/* Custom styles for the calendar */
+.custom-calendar {
+  background-color: #fff; /* Set your desired background color */
+  border: 1px solid #ddd; /* Set your desired border color */
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Custom style for the calendar header */
+.custom-calendar .react-datepicker__header {
+  background-color: #fff; /* Set your desired header background color */
+  color: #fff; /* Set your desired header text color */
+}
+
+/* Custom style for the calendar days */
+.custom-calendar .react-datepicker__day {
+  color: #333; /* Set your desired day text color */
+}
+
+/* Custom style for the selected day */
+.custom-calendar .react-datepicker__day--selected {
+  background-color: #4f46e5; /* Set your desired selected day background color */
+  color: #fff; /* Set your desired selected day text color */
+}

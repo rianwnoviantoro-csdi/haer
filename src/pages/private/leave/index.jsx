@@ -6,9 +6,16 @@ import {
 import { SharedComp } from "../../../components";
 import { useDispatch } from "react-redux";
 import { setShowBottomNav } from "../../../redux/features/common/common.slice";
+import dayjs from "dayjs";
 
 function Leave() {
   let [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  let [title, seTitle] = useState("");
+  let [leaveType, setLeaveType] = useState("");
+  let [contactNumber, setContactNumber] = useState("");
+  let [startDate, setStartDate] = useState(null);
+  let [endDate, setEndDate] = useState(null);
+  let [reason, setReason] = useState("");
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -96,12 +103,43 @@ function Leave() {
     },
   ];
 
+  const leaveTypeArray = [
+    { id: 1, label: "Medical Leave" },
+    { id: 2, label: "Medical Leave" },
+    { id: 3, label: "Medical Leave" },
+    { id: 4, label: "Medical Leave" },
+  ];
+
   function OpenCreateModal() {
     setIsCreateModalOpen(true);
   }
 
   function CloseCreateModal() {
     setIsCreateModalOpen(false);
+  }
+
+  function TitleHandler(e) {
+    seTitle(e);
+  }
+
+  function LeaveTypeHandler(e) {
+    setLeaveType(e);
+  }
+
+  function ContactNumberHandler(e) {
+    setContactNumber(e);
+  }
+
+  function StartDateHandler(e) {
+    setStartDate(e);
+  }
+
+  function EndDateHandler(e) {
+    setEndDate(e);
+  }
+
+  function ReasonHandler(e) {
+    setReason(e);
   }
 
   return (
@@ -133,7 +171,56 @@ function Leave() {
         isOpen={isCreateModalOpen}
         onClose={CloseCreateModal}
       >
-        test
+        <form action="">
+          <SharedComp.Input
+            label="Title"
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={TitleHandler}
+          />
+          <SharedComp.SelectInput
+            label="Leave Type"
+            type="text"
+            options={leaveTypeArray}
+            placeholder="Leave type"
+            value={leaveType}
+            onChange={LeaveTypeHandler}
+          />
+          <SharedComp.Input
+            label="Contact Number"
+            type="text"
+            placeholder="Contact number"
+            value={contactNumber}
+            onChange={ContactNumberHandler}
+          />
+          <SharedComp.DatePickerInput
+            label="Start Date"
+            placeholder={dayjs().format("DD/MM/YYYY")}
+            value={startDate}
+            onChange={StartDateHandler}
+          />
+          <SharedComp.DatePickerInput
+            label="End Date"
+            placeholder={dayjs().add(1, "day").format("DD/MM/YYYY")}
+            value={endDate}
+            onChange={EndDateHandler}
+          />
+          <SharedComp.TextArea
+            label="Reason for Leave"
+            type="text"
+            placeholder="Reason for Leave"
+            value={reason}
+            onChange={ReasonHandler}
+          />
+          <div className="mt-4">
+            <SharedComp.Button
+              background="bg-[#3085FE]"
+              color="text-white"
+              label="Apply Leave"
+            />
+          </div>
+        </form>
       </SharedComp.Modal>
     </>
   );
