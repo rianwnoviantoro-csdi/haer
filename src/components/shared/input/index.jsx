@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 
-function Input({ label, placeholder, type = "text", value, onChange }) {
+function Input({ label, placeholder, type = "text", value, onChange, props }) {
   let [isFocused, setIsFocused] = useState(false);
   let [isPasswordVisible, setIsPasswordVisible] = useState(false);
-
 
   function togglePasswordVisibility() {
     setIsPasswordVisible((prevState) => !prevState);
@@ -16,6 +15,7 @@ function Input({ label, placeholder, type = "text", value, onChange }) {
   return (
     <div className="relative mt-6">
       <input
+        {...props}
         type={inputType}
         className={`bg-white w-full px-3 py-2 placeholder-gray-500 border border-indigo-200 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500`}
         onFocus={() => setIsFocused(true)}

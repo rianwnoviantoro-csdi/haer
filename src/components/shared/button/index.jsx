@@ -1,10 +1,9 @@
 import React from "react";
 
-function Button({ background, color, label, border = "", icon, onClick }) {
+function Button({ background, color, label, border = "", icon }) {
   return (
     <button
-      // type="submit"
-      onClick={onClick}
+      type="submit"
       className={`${background} ${border} w-full py-2.5 rounded-lg`}
     >
       {icon ? (

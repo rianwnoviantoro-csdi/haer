@@ -27,8 +27,8 @@ function Register() {
     setPassword(e);
   }
 
-  function ConfirmHandler(e) {
-    setConfirm(e);
+  function ConfirmPasswordHandler(e) {
+    setConfirmPassword(e);
   }
 
   function MoveToDashboad() {
@@ -82,13 +82,13 @@ function Register() {
             placeholder="confirm password"
             type="password"
             value={confirmPassword}
-            onChange={ConfirmHandler}
+            onChange={ConfirmPasswordHandler}
           />
           <div className="relative mt-3 mb-6 flex gap-2 place-items-baseline">
             <input type="checkbox" />
             <label className="font-light text-sm">
-              I agree to the <Link to="/" className="text-[#3085FE]">Terms & Condition</Link> &{" "}
-              <Link to="/" className="text-[#3085FE]">Privacy Policy</Link> set out by this site.
+              I agree to the <Link to="/term-and-condition" className="text-[#3085FE]">Terms & Condition</Link> &{" "}
+              <Link to="/privacy-policy" className="text-[#3085FE]">Privacy Policy</Link> set out by this site.
             </label>
           </div>
           <SharedComp.Button

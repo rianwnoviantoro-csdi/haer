@@ -1,5 +1,7 @@
 import LOGO from "./assets/Logo.svg";
 import GOOGLE from "./assets/google.svg";
-import AVATAR from './assets/avatar.jpg'
+import AVATAR from "./assets/avatar.jpg";
 
-export { LOGO, GOOGLE, AVATAR };
+const BASE_URL = "http://localhost:3000";
+
+export { LOGO, GOOGLE, AVATAR, BASE_URL };

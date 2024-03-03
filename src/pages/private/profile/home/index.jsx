@@ -55,12 +55,12 @@ function Home() {
           title="Setting"
         />
         <SharedComp.ProfileMenuItem
-          path="term-and-condition"
+          path="/term-and-condition"
           icon={<DocumentIcon className="h-6 w-6 " />}
           title="Term & Conditions"
         />
         <SharedComp.ProfileMenuItem
-          path="privacy-policy"
+          path="/privacy-policy"
           icon={<ShieldCheckIcon className="h-6 w-6 " />}
           title="Privacy Policy"
         />
